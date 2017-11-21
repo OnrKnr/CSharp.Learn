@@ -136,6 +136,24 @@ namespace KafeYonetim.Data
             }
         }
 
+        public static int BulasikciEkle(Bulasikci bulasikci)
+        {
+            using (var connection = CreateConnection())
+            {
+                var command = new SqlCommand("BulasikciEkle", connection);
+
+                command.Parameters.AddWithValue("@hijyenPuan", bulasikci.HijyenPuani);
+                command.Parameters.AddWithValue("@kafeId", bulasikci.Kafe.Id);
+                command.Parameters.AddWithValue("@isim", bulasikci.Isim);
+
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                var result = Convert.ToInt32(command.ExecuteScalar());
+
+                return result;
+            }
+        }
+
         public static List<Urun> UrunListesiniGetir()
         {
             using (var connection = CreateConnection())
