@@ -33,6 +33,7 @@ namespace Generic
 
     }
 
+//Generic olmadan
     //public class StackString
     //{
     //    private string[] Dizi { get; set; }
