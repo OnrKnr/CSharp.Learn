@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Asci.cs" />
+    <Compile Include="Bulasikci.cs" />
     <Compile Include="Calisan.cs" />
     <Compile Include="CalisanDurum.cs" />
     <Compile Include="Garson.cs" />
